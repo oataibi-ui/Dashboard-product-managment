@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductPro Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo"><img src="logo.png" alt=""></div>
+            <div class="brand-info">
+                <h1>MyProducts</h1>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+            <a href="#" class="nav-item"><i data-lucide="box"></i><span>Products</span></a>
+            <a href="#" class="nav-item"><i data-lucide="tag"></i><span>Categories</span></a>
+            <a href="#" class="nav-item"><i data-lucide="shopping-cart"></i><span>Orders</span></a>
+            <a href="#" class="nav-item"><i data-lucide="users"></i><span>Customers</span></a>
+            <a href="#" class="nav-item"><i data-lucide="chart-no-axes-combined"></i><span>Analytics</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+           <a href="#" class="nav-item"><i data-lucide="settings"></i><span>Settings</span></a>
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+    <main class="main">
+
+        <header class="topbar">
+            <div class="search-box">
+                <i data-lucide="search"></i>
+                <input type="text" placeholder="Search products, categories, or anything...">
+            </div>
+
+            <div class="topbar-actions">
+                <div class="mess-noti">
+                    <button class="icon-button">
+                        <i data-lucide="message-circle"></i>
+                    </button>
+                    <button class="icon-button">
+                        <i data-lucide="bell"></i>
+                        <span class="notification-dot"></span>
+                    </button>
+                </div>
+
+                <div class="topbar-user">
+                    
+                        <img src="icon.png" alt="">
+                </div>
+            </div>
+        </header>
+
+         <section class="dashboard">
+
+            <!-- ============ LEFT COLUMN ============ -->
+            <div class="dashboard-main">
+
+              <section class="KPI-categories"> 
+                  <!-- KPI CARDS -->
+                  <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <div class="stat-icon green"><i data-lucide="package"></i></div>
+                        <span class="stat-label">Total Products</span>
+                        <strong class="stat-value">24</strong>
+                        <div class="stat-growth positive"><i data-lucide="arrow-up"></i><span>+2 this week</span></div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon blue"><i data-lucide="circle-dollar-sign"></i></div>
+                        <span class="stat-label">Total Sales</span>
+                        <strong class="stat-value">12,480 DA</strong>
+                        <div class="stat-growth positive"><i data-lucide="arrow-up"></i><span>+18% this week</span></div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon purple"><i data-lucide="clipboard-list"></i></div>
+                        <span class="stat-label">Total Orders</span>
+                        <strong class="stat-value">86</strong>
+                        <div class="stat-growth positive"><i data-lucide="arrow-up"></i><span>+12% this week</span></div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon yellow"><i data-lucide="star"></i></div>
+                        <span class="stat-label">Average Rating</span>
+                        <strong class="stat-value">4.6</strong>
+                        <div class="stat-growth positive"><i data-lucide="arrow-up"></i><span>+0.2 this week</span></div>
+                    </div>
+
+                  </div>
+
+                  <div class="dashboard-card products-categories">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <i data-lucide="layout-grid"></i>
+                                <h3>Product Categories</h3>
+                            </div>
+                        </div>
+
+                        <div class="categories-body">
+                            <div class="donut-wrapper">
+
+    <svg
+        class="category-donut"
+        viewBox="0 0 160 160"
+        aria-label="Product categories chart"
+    >
+
+        <!-- Background ring -->
+        <circle
+            class="donut-bg"
+            cx="80"
+            cy="80"
+            r="58"
+        ></circle>
+
+        <!-- Electronics -->
+        <circle
+            class="donut-segment electronics"
+            cx="80"
+            cy="80"
+            r="58"
+            data-label="Electronics"
+            data-value="8"
+            data-percentage="33"
+        ></circle>
+
+        <!-- Clothing -->
+        <circle
+            class="donut-segment clothing"
+            cx="80"
+            cy="80"
+            r="58"
+            data-label="Clothing"
+            data-value="5"
+            data-percentage="21"
+        ></circle>
+
+        <!-- Home & Living -->
+        <circle
+            class="donut-segment home"
+            cx="80"
+            cy="80"
+            r="58"
+            data-label="Home & Living"
+            data-value="4"
+            data-percentage="17"
+        ></circle>
+
+        <!-- Books -->
+        <circle
+            class="donut-segment books"
+            cx="80"
+            cy="80"
+            r="58"
+            data-label="Books"
+            data-value="3"
+            data-percentage="13"
+        ></circle>
+
+        <!-- Others -->
+        <circle
+            class="donut-segment others"
+            cx="80"
+            cy="80"
+            r="58"
+            data-label="Others"
+            data-value="4"
+            data-percentage="17"
+        ></circle>
+
+    </svg>
+
+    <div class="donut-center">
+        <strong id="categoryDonutValue">24</strong>
+        <span id="categoryDonutLabel">Products</span>
+        <em id="categoryDonutPercentage"></em>
+    </div>
+
+</div>
+
+                           <ul class="legend">
+
+    <li data-category="Electronics">
+        <i style="background:#3b82f6"></i>
+        <span>Electronics</span>
+        <b>8</b>
+        <em>33%</em>
+    </li>
+
+    <li data-category="Clothing">
+        <i style="background:#8b5cf6"></i>
+        <span>Clothing</span>
+        <b>5</b>
+        <em>21%</em>
+    </li>
+
+    <li data-category="Home & Living">
+        <i style="background:#00c96b"></i>
+        <span>Home &amp; Living</span>
+        <b>4</b>
+        <em>17%</em>
+    </li>
+
+    <li data-category="Books">
+        <i style="background:#f59e0b"></i>
+        <span>Books</span>
+        <b>3</b>
+        <em>13%</em>
+    </li>
+
+    <li data-category="Others">
+        <i style="background:#94a3b8"></i>
+        <span>Others</span>
+        <b>4</b>
+        <em>17%</em>
+    </li>
+
+</ul>
+</div>
+</div>
+
+</section>   
+
+<!-- SALES + -->
+                <section class="dashboard-row">
+
+                    <div class="dashboard-card sales-card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <i data-lucide="chart-no-axes-combined"></i>
+                                <h3>Sales Overview</h3>
+                            </div>
+                            <button class="period-select">Last 7 days <i data-lucide="chevron-down"></i></button>
+                        </div>
+
+                        <div class="sales-chart">
+                            <div class="chart-y-axis">
+                                <span>4,000 DA</span><span>3,000 DA</span><span>2,000 DA</span><span>1,000 DA</span><span>0</span>
+                            </div>
+
+                            <div class="chart-content">
+                                <div class="chart-grid">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+
+                                <svg viewBox="0 0 700 220" preserveAspectRatio="none" class="sales-svg">
+                                    <path class="sales-area" d="M0 185 C45 165, 75 135, 115 145 C155 155, 175 170, 215 130 C255 90, 285 110, 330 115 C375 120, 395 150, 440 105 C485 60, 520 75, 555 65 C600 52, 645 35, 700 10 L700 220 L0 220 Z"/>
+                                    <path class="sales-line" d="M0 185 C45 165, 75 135, 115 145 C155 155, 175 170, 215 130 C255 90, 285 110, 330 115 C375 120, 395 150, 440 105 C485 60, 520 75, 555 65 C600 52, 645 35, 700 10"/>
+                                    <path class="dot" d="M0 185h0M115 145h0M215 130h0M330 115h0M440 105h0M555 65h0M700 10h0"/>
+                                </svg>
+
+                                <div class="chart-x-axis">
+                                    <span>Sep 21</span><span>Sep 22</span><span>Sep 23</span><span>Sep 24</span><span>Sep 25</span><span>Sep 26</span><span>Sep 27</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+
+
+                <!-- PRODUCTS TABLE -->
+                <section class="dashboard-card products-card">
+
+                    <div class="card-header">
+                        <div class="card-title">
+                            <i data-lucide="box"></i>
+                            <h3>Products</h3>
+                        </div>
+
+                        <div class="table-tools">
+                            <div class="table-search">
+                                <i data-lucide="search"></i>
+                                <input type="text" id="productSearch" placeholder="Search products...">
+                            </div>
+                            <button class="btn-outline"><i data-lucide="filter"></i> Filter</button>
+                            <button class="btn-green"><i data-lucide="plus"></i> Add Product</button>
+                        </div>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table class="products-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th><th>Product</th><th>Category</th><th>Price</th>
+                                    <th>Stock</th><th>Status</th><th>Rating</th><th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#001</td>
+                                    <td><div class="product-cell"><span class="thumb t-blue"><i data-lucide="laptop"></i></span>MacBook Air M2</div></td>
+                                    <td><span class="badge cat-electronics">Electronics</span></td>
+                                    <td>99,900 DA</td><td>12</td>
+                                    <td><span class="badge in-stock">In Stock</span></td>
+                                    <td><span class="rating"><i data-lucide="star"></i>4.8</span></td>
+                                    <td><div class="row-actions"><button><i data-lucide="pencil"></i></button><button><i data-lucide="ellipsis"></i></button></div></td>
+                                </tr>
+                                <tr>
+                                    <td>#002</td>
+                                    <td><div class="product-cell"><span class="thumb t-navy"><i data-lucide="headphones"></i></span>Wireless Headphones</div></td>
+                                    <td><span class="badge cat-electronics">Electronics</span></td>
+                                    <td>12,900 DA</td><td>34</td>
+                                    <td><span class="badge in-stock">In Stock</span></td>
+                                    <td><span class="rating"><i data-lucide="star"></i>4.6</span></td>
+                                    <td><div class="row-actions"><button><i data-lucide="pencil"></i></button><button><i data-lucide="ellipsis"></i></button></div></td>
+                                </tr>
+                                <tr>
+                                    <td>#003</td>
+                                    <td><div class="product-cell"><span class="thumb t-gray"><i data-lucide="shirt"></i></span>Hoodie</div></td>
+                                    <td><span class="badge cat-clothing">Clothing</span></td>
+                                    <td>4,990 DA</td><td>18</td>
+                                    <td><span class="badge in-stock">In Stock</span></td>
+                                    <td><span class="rating"><i data-lucide="star"></i>4.2</span></td>
+                                    <td><div class="row-actions"><button><i data-lucide="pencil"></i></button><button><i data-lucide="ellipsis"></i></button></div></td>
+                                </tr>
+                                <tr>
+                                    <td>#004</td>
+                                    <td><div class="product-cell"><span class="thumb t-amber"><i data-lucide="lamp-desk"></i></span>Desk Lamp</div></td>
+                                    <td><span class="badge cat-home">Home &amp; Living</span></td>
+                                    <td>3,990 DA</td><td>8</td>
+                                    <td><span class="badge low-stock">Low Stock</span></td>
+                                    <td><span class="rating"><i data-lucide="star"></i>4.4</span></td>
+                                    <td><div class="row-actions"><button><i data-lucide="pencil"></i></button><button><i data-lucide="ellipsis"></i></button></div></td>
+                                </tr>
+                                <tr>
+                                    <td>#005</td>
+                                    <td><div class="product-cell"><span class="thumb t-teal"><i data-lucide="book-open"></i></span>Clean Code Book</div></td>
+                                    <td><span class="badge cat-books">Books</span></td>
+                                    <td>2,990 DA</td><td>25</td>
+                                    <td><span class="badge in-stock">In Stock</span></td>
+                                    <td><span class="rating"><i data-lucide="star"></i>4.7</span></td>
+                                    <td><div class="row-actions"><button><i data-lucide="pencil"></i></button><button><i data-lucide="ellipsis"></i></button></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-footer">
+                        <span>Showing 1 – 5 of 24 products</span>
+                        <div class="pagination">
+                            <button><i data-lucide="chevron-left"></i></button>
+                            <button class="active">1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button>5</button>
+                            <button><i data-lucide="chevron-right"></i></button>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- ============ RIGHT COLUMN ============ -->
+            <aside class="dashboard-side">
+
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <i data-lucide="zap" class="accent"></i>
+                            <h3>Recent Activity</h3>
+                        </div>
+                    </div>
+
+                    <ul class="activity-list">
+                        <li>
+                            <span class="act-icon a-green"><i data-lucide="plus"></i></span>
+                            <div><strong>New product added</strong><span>Wireless Headphones</span></div>
+                            <time>2h ago</time>
+                        </li>
+                        <li>
+                            <span class="act-icon a-blue"><i data-lucide="shopping-cart"></i></span>
+                            <div><strong>Order received</strong><span>#ORD-1042 · 12,999 DA</span></div>
+                            <time>4h ago</time>
+                        </li>
+                        <li>
+                            <span class="act-icon a-purple"><i data-lucide="pencil"></i></span>
+                            <div><strong>Product updated</strong><span>Laptop Sleeve</span></div>
+                            <time>6h ago</time>
+                        </li>
+                        <li>
+                            <span class="act-icon a-teal"><i data-lucide="user"></i></span>
+                            <div><strong>New customer registered</strong><span>Amin Bensalah</span></div>
+                            <time>8h ago</time>
+                        </li>
+                        <li>
+                            <span class="act-icon a-slate"><i data-lucide="tag"></i></span>
+                            <div><strong>Category created</strong><span>Accessories</span></div>
+                            <time>1d ago</time>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="promo-card">
+                    <div class="promo-icon"><i data-lucide="box"></i></div>
+                    <h4>Scale your business</h4>
+                    <p>Discover insights, optimize your products and grow faster</p>
+                    <button class="btn-green">View Analytics <i data-lucide="arrow-right"></i></button>
+                </div>
+
+            </aside>
+
+        </section>
+    </main>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
